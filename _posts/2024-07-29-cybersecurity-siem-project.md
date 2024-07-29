@@ -12,7 +12,6 @@ tags:
   - honeypot
   - tutorial
 published: true
-media_subpath: /assets/
 ---
 
 ## Introduction
@@ -31,8 +30,8 @@ The idea behind this project is to create a VM in Microsoft Azure that serves as
 
 ### Attacks Graphed on a World Map
 
-![Failed RDP Attacks Graphed](assets/img/blog/failed_rdp_geo_graph.png)
+![Failed RDP Attacks Graphed](/assets/img/blog/failed_rdp_geo_graph.png)
 
 ### Most Common Account Names Used During RDP Attacks
 
-![Failed RDP Attacks Bar Graphed](assets/img/blog/failed_rdp_bar_graph.png)
+![Failed RDP Attacks Bar Graphed](/assets/img/blog/failed_rdp_bar_graph.png)
