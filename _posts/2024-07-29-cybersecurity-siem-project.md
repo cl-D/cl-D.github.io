@@ -11,7 +11,6 @@ tags:
   - project
   - honeypot
   - tutorial
-published: true
 ---
 
 ## Introduction
