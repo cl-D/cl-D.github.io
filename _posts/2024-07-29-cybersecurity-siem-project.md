@@ -23,7 +23,7 @@ The idea behind this project is to create a VM in Microsoft Azure that serves as
 - **Microsoft Defender for Cloud:** For gathering logs from the VM
 - **Microsoft Log Analytics Workspace:** Store and organize logs  
 - **Microsoft Azure VM:** Serves as the honeypot
-- **PowerShell:** A script for converting IP's, from failed RDP attacks, into useful geolocation 
+- **PowerShell:** A script for converting IP's, from failed RDP attacks, into useful geolocation
 - **KQL:** Query language used to structure data from logs
 - **ipgeolocation.io:** Provides the API for mapping IP to geolocation
 
