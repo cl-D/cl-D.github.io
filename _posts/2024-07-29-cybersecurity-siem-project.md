@@ -2,15 +2,8 @@
 title: Cybersecurity SIEM Honeypot Project
 description: Setup up your own cyber honeypot and monitor attacks in Microsoft Sentinel (SIEM) 
 date: 2024-07-29 11:30:00 -0700
-categories:
-  - Security
-  - SIEM
-tags:
-  - security
-  - siem
-  - project
-  - honeypot
-  - tutorial
+categories: [Security, SIEM]
+tags: [security, siem, project, honeypot]
 ---
 
 ## Introduction
