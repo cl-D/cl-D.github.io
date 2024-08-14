@@ -7,7 +7,7 @@ tags: [active directory, home lab, project]
 ---
 
 
-# Active Directory Home Lab
+# Introduction
 
 I realized that in my career as an IT Technician, I had experience serving as the administrator for an Active Directory Domain Controller, but never had the opportunity to set up Active Directory from scratch. In this lab we will set up and configure Active Directory on a virtual machine (VM) using VMware Workstation. We will also set up client VM's running Windows 11, that we will join to the Active Directory domain.
 
