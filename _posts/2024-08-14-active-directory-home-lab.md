@@ -4,7 +4,7 @@ description: Set up Active Directory on a Windows Server 2022 VM and connect a W
 date: 2024-08-14
 categories: [Active Directory, Home Lab]
 tags: [active directory, home lab, project]
-media_subpath: /assets/img/blog/
+media_subpath: /assets/
 ---
 
 
