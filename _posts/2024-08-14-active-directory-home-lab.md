@@ -1,6 +1,6 @@
 ---
 title: Active Directory Home Lab
-description: Set up Active Directory on a Windows Server 2022 VM and connect a Windows 10 VM to the domain.
+description: Set up Active Directory on a Windows Server 2022 VM and connect a Windows 10 VM to the domain
 date: 2024-08-14
 categories: [Active Directory, Home Lab]
 tags: [active directory, home lab, project]
