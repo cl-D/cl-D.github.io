@@ -9,7 +9,7 @@ tags: [active directory, home lab, project]
 
 # Active Directory Home Lab
 
-I realized that in my career as an IT Technician, I had experience serving as the administrator for an Active Directory Domain Controller, but never had the opportunity to setup Active Directory from scratch. In this lab we will set up and configure Active Directory on a virtual machine (VM) using VMware Workstation. We will also setup client VM's running Windows 11, that we will join to the Active Directory domain.
+I realized that in my career as an IT Technician, I had experience serving as the administrator for an Active Directory Domain Controller, but never had the opportunity to set up Active Directory from scratch. In this lab we will set up and configure Active Directory on a virtual machine (VM) using VMware Workstation. We will also set up client VM's running Windows 11, that we will join to the Active Directory domain.
 
 ## Tools Used
 
@@ -301,7 +301,7 @@ If we check Active Directory, we can see that our PC "USER-PC1" now appears unde
 
 ![image](/assets/img/blog/Pasted_image_20240807180316.png)
 
-Congratulations! We have successfully setup Active Directory, created our first user, and joined our user's PC to the domain!
+Congratulations! We have successfully set up Active Directory, created our first user, and joined our user's PC to the domain!
 
 
 
