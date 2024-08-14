@@ -4,7 +4,6 @@ description: Set up your own cyber honeypot and monitor attacks in Microsoft Sen
 date: 2024-07-29
 categories: [Security, SIEM]
 tags: [security, siem, project, honeypot]
-media_subpath: /assets/img/blog/
 ---
 
 ## Introduction
