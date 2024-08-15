@@ -108,39 +108,51 @@ Under Network Adapter, select the new virtual NAT network we just created and th
 It is now time to create our Windows 10 client PC that we will eventually connect to our domain. The process to set this up is fairly similar to setting up our Windows Server. 
 
 Create a new virtual machine.
+
 ![image](/assets/img/blog/Pasted_image_20240730142505.png)
 
 Select Windows 10 x64 or 11 x64 depending on what operating system you decided to go with.
+
 ![image](/assets/img/blog/Pasted_image_20240730142556.png)
 
 Create an encryption password and store it somewhere safe.
+
 ![image](/assets/img/blog/Pasted_image_20240730142739.png)
 
 Choose your disk size. I went with the recommended.
+
 ![image](/assets/img/blog/Pasted_image_20240730142803.png)
 
 Click "Customize Hardware."
+
 ![image](/assets/img/blog/Pasted_image_20240730142833.png)
 
 Here we will select the ISO image file for Windows 10 or 11 and we can also configure our memory and number of processors.
+
 ![image](/assets/img/blog/Pasted_image_20240730143144.png)
 
 Under the Network Adapter, select the custom virtual network we created earlier. Finish the configuration and start the VM.
+
 ![image](/assets/img/blog/Pasted_image_20240730143310.png)
 
 Click Next to start the installation and setup process.
+
 ![image](/assets/img/blog/Pasted_image_20240730143331.png)
 
-Select "I don't have a product key"
+Select "I don't have a product key."
+
 ![image](/assets/img/blog/Pasted_image_20240730143404.png)
 
-Select Windows 10/11 Pro. 
+Select Windows 10/11 Pro.
+
 ![image](/assets/img/blog/Pasted_image_20240730143456.png)
 
 Select custom install and continue.
+
 ![image](/assets/img/blog/Pasted_image_20240730143532.png)
 
 Windows is now installing. This will take some time.
+
 ![image](/assets/img/blog/Pasted_image_20240730143554.png)
 
 Once we login to the PC we will go ahead and install the VMware tools just like we did for the Windows Server VM previously.
@@ -154,6 +166,7 @@ Click "Internet Protocol Version 4 (TCP/IPv4)" and click "Properties"
 ![image](/assets/img/blog/Pasted_image_20240807163844.png)
 
 ![image](/assets/img/blog/Pasted_image_20240807164309.png)
+
 Now, select "Use the following DNS server addresses" and head on back over to the Windows Server 2022 VM.
 
 In our Windows Server 2022 VM we will type "cmd" into the search bar and open up "Command Prompt." Next type "ipconfig" and hit enter. This will show us our IPv4 address.
@@ -244,6 +257,7 @@ Name it "\_USERS"
 This will create a new folder under "mydomain.local" called "\_USERS"
 Right click this folder and create a new user.
 Fill out the information however you'd like.
+
 ![image](/assets/img/blog/Pasted_image_20240807173453.png)
 
 Click Next and create a new password. Make sure you have "User must change password at next logon" unchecked and "Password never expires" checked.
