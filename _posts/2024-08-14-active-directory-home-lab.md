@@ -113,13 +113,13 @@ Create a new virtual machine.
 Select Windows 10 x64 or 11 x64 depending on what operating system you decided to go with.
 ![image](/assets/img/blog/Pasted_image_20240730142556.png)
 
-Create an encryption password and store it somewhere safe. 
+Create an encryption password and store it somewhere safe.
 ![image](/assets/img/blog/Pasted_image_20240730142739.png)
 
 Choose your disk size. I went with the recommended.
 ![image](/assets/img/blog/Pasted_image_20240730142803.png)
 
-Click "Customize Hardware"
+Click "Customize Hardware."
 ![image](/assets/img/blog/Pasted_image_20240730142833.png)
 
 Here we will select the ISO image file for Windows 10 or 11 and we can also configure our memory and number of processors.
@@ -164,7 +164,7 @@ Type the IPv4 address into the "Preferred DNS server" input and add "8.8.8.8" to
 
 ![image](/assets/img/blog/Pasted_image_20240807164603.png)
 
-### Setting up Active Directory Domain Services
+## Setting up Active Directory Domain Services
 
 It's finally time to set up Active Directory Domain Services on our Windows Server 2022 VM.
 
@@ -194,10 +194,9 @@ This will take some time.
 
 ![image](/assets/img/blog/Pasted_image_20240807165505.png)
 
-
 Once it has successfully installed, you can close out of the window.
 
-Next, click on the flag at the top and click "Promote this server to a domain controller"
+Next, click on the flag at the top and click "Promote this server to a domain controller."
 
 ![image](/assets/img/blog/Pasted_image_20240807165651.png)
 
@@ -213,7 +212,7 @@ Continue through the menus. A NetBIOS domain name will automatically be generate
 
 ![image](/assets/img/blog/Pasted_image_20240807170357.png)
 
-Click "Next" all the way through and then click "Install"
+Click "Next" all the way through and then click "Install."
 
 ![image](/assets/img/blog/Pasted_image_20240807170453.png)
 
