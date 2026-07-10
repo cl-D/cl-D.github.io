@@ -1,0 +1,21 @@
+{
+  "name": "cl-d.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sal L's portfolio and blog — plain HTML/CSS/JS with a markdown blog pipeline",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node serve.js",
+    "dev": "node build.js && node serve.js",
+    "new-post": "node new-post.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "highlight.js": "^11.11.1",
+    "marked": "^18.0.6",
+    "marked-highlight": "^2.2.4"
+  }
+}

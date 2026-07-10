@@ -1,0 +1,13 @@
+# dependencies & build output
+node_modules/
+dist/
+
+# local tooling
+.claude/
+
+# Windows Explorer thumbnail cache
+Thumbs.db
+
+# personal files — PDFs (e.g. the local resume copy) contain private details
+# and must never be pushed to this public repository
+*.pdf
