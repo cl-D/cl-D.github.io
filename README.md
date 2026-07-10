@@ -82,6 +82,6 @@ blog index and `feed.xml`), and deploys `dist/` to GitHub Pages.
 | Change the blog page shells | `src/templates/*.html` |
 | Write a post | `posts/*.md` |
 
-> **Note:** the projects section currently contains clearly-marked placeholder cards.
-> The resume PDF is intentionally excluded from this repo (see `.gitignore`) because
-> it contains a private email address.
+> **Note:** personal source documents (resume PDFs, `Master-Profile.md`) are
+> intentionally excluded from this repo via `.gitignore` because they contain
+> private details.

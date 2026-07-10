@@ -8,6 +8,7 @@ dist/
 # Windows Explorer thumbnail cache
 Thumbs.db
 
-# personal files — PDFs (e.g. the local resume copy) contain private details
-# and must never be pushed to this public repository
+# personal files — PDFs (e.g. the local resume copy) and the internal master
+# profile contain private details and must never be pushed to this public repo
 *.pdf
+Master-Profile.md

@@ -345,6 +345,10 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
 
 .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
+.card-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.2rem; }
+.card-links a { font-size: 0.82rem; }
+.card-links a::before { content: "→ "; color: var(--orange); }
+
 /* ---- Chips / tags -------------------------------------------- */
 .chip {
   display: inline-block;
