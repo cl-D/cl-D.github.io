@@ -7,7 +7,7 @@ markdown files — pushing one to `main` publishes it automatically via GitHub A
 
 ---
 
-## ✍️ Publish a blog post (the short version)
+## Publish a blog post (the short version)
 
 ```bash
 npm run new-post -- "My Post Title"   # creates posts/my-post-title.md with valid front matter
@@ -42,14 +42,14 @@ fenced code blocks with syntax highlighting (```powershell, ```bash, ```yaml, ..
 
 ---
 
-## 🖥️ Preview locally
+## Preview locally
 
 ```bash
 npm install        # first time only
 npm run dev        # builds, then serves at http://localhost:8080
 ```
 
-## 📁 How this repo works
+## How this repo works
 
 ```
 ├── src/                    # static site source — edit resume content here
@@ -59,7 +59,7 @@ npm run dev        # builds, then serves at http://localhost:8080
 │   ├── js/main.js          #   typing animation (progressive enhancement)
 │   ├── fonts/              #   JetBrains Mono (self-hosted)
 │   └── templates/          #   HTML shells for blog pages ({{placeholders}})
-├── posts/                  # ✍️ blog posts — one markdown file each
+├── posts/                  #   blog posts — one markdown file each
 ├── build.js                # markdown → HTML, blog index, RSS feed
 ├── new-post.js             # scaffolds a post (npm run new-post)
 ├── serve.js                # local preview server (npm run serve)
@@ -72,7 +72,7 @@ npm run dev        # builds, then serves at http://localhost:8080
 dependencies, runs `build.js` (converts `posts/*.md`, copies `src/`, generates the
 blog index and `feed.xml`), and deploys `dist/` to GitHub Pages.
 
-## 🔧 Common edits
+## Common edits
 
 | I want to… | Edit… |
 |---|---|
