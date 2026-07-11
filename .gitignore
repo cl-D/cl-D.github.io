@@ -12,3 +12,4 @@ Thumbs.db
 # profile contain private details and must never be pushed to this public repo
 *.pdf
 Master-Profile.md
+HANDOFF.md
