@@ -322,7 +322,20 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
   gap: 1rem;
 }
 
+/* Square tiles; hovering (or tapping, on touch screens — see main.js) floats
+   the tile open over the content below it to reveal the clipped text. */
 .card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.card-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
   background: var(--bg-hard);
   border: 1px solid var(--bg1);
   border-radius: 8px;
@@ -330,8 +343,38 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  interpolate-size: allow-keywords; /* lets height animate to auto where supported */
+  transition: height 0.25s ease, box-shadow 0.25s ease, border-color 0.15s ease;
 }
-.card:hover { border-color: var(--bg3); }
+
+.card.expanded .card-inner,
+.card:focus-within .card-inner {
+  height: auto;
+  min-height: 100%;
+  z-index: 5;
+  border-color: var(--bg3);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
+}
+.card.expanded .card-desc,
+.card:focus-within .card-desc {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* hover only where hover exists — on touch, tap emulation would stick */
+@media (hover: hover) {
+  .card:hover .card-inner {
+    height: auto;
+    min-height: 100%;
+    z-index: 5;
+    border-color: var(--bg3);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
+  }
+  .card:hover .card-desc {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
 
 .card-title {
   font-size: 0.95rem;
@@ -341,11 +384,20 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
 }
 .card-title .folder { color: var(--blue); margin-right: 0.4em; }
 
-.card-desc { font-size: 0.85rem; color: var(--fg3); margin: 0; flex: 1; }
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--fg3);
+  margin: 0;
+  flex: 1;
+  overflow: hidden;
+  /* text clipped by the square fades out at the bottom */
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 1.5em), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 1.5em), transparent);
+}
 
-.card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; flex: none; }
 
-.card-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.2rem; }
+.card-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.2rem; flex: none; }
 .card-links a { font-size: 0.82rem; }
 .card-links a::before { content: "→ "; color: var(--orange); }
 
@@ -555,6 +607,7 @@ footer a:hover { color: var(--yellow); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .cursor { animation: none; }
+  .card-inner { transition: none; }
 }
 
 /* ---- Responsive --------------------------------------------------------- */

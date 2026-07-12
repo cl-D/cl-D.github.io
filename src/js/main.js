@@ -53,6 +53,27 @@ const fakeTabs = [
   ["ransomware as a service pricing - ChatGPT", "chatgpt.ico"],
 ];
 
+// Project tiles are squares that expand on hover to reveal the clipped text.
+// Touch screens have no hover, so there a tap toggles a tile open instead
+// (taps on the tile's links still navigate as usual).
+const cards = document.querySelectorAll(".card");
+if (cards.length && window.matchMedia("(hover: none)").matches) {
+  cards.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
+      const wasOpen = card.classList.contains("expanded");
+      cards.forEach((c) => c.classList.remove("expanded"));
+      card.classList.toggle("expanded", !wasOpen);
+    });
+  });
+  // tapping anywhere outside closes the open tile
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".card")) {
+      cards.forEach((c) => c.classList.remove("expanded"));
+    }
+  });
+}
+
 const iconEl = document.querySelector("link[rel='icon']");
 if (iconEl) {
   const realTitle = document.title;
