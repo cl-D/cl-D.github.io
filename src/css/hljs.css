@@ -1,0 +1,110 @@
+/* ============================================================
+   Syntax highlighting for blog code blocks — hand-rolled to
+   match the site palette (colors.toml). Replaces the stock
+   highlight.js Gruvbox theme previously copied at build time.
+   ============================================================ */
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs { padding: 3px 5px; }
+
+.hljs {
+  color: #e4e6fb;
+  background: #070506;
+}
+
+.hljs::selection,
+.hljs ::selection {
+  background-color: #979fec;
+  color: #070506;
+}
+
+/* comments — muted gray-mauve */
+.hljs-comment,
+.hljs-quote {
+  color: #836f79;
+  font-style: italic;
+}
+
+/* keywords, tags — mauve */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-template-tag,
+.hljs-doctag {
+  color: #cd9dcf;
+}
+
+/* strings — pink */
+.hljs-string,
+.hljs-char.escape_,
+.hljs-regexp {
+  color: #e095b5;
+}
+
+/* numbers, literals, constants — lavender */
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-variable.constant_ {
+  color: #d9b6fd;
+}
+
+/* function/class names, headings — periwinkle accent */
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.function_,
+.hljs-section {
+  color: #979fec;
+}
+
+/* types, built-ins — blue */
+.hljs-type,
+.hljs-built_in,
+.hljs-class {
+  color: #648ed0;
+}
+
+/* attributes, params — light blue */
+.hljs-attr,
+.hljs-attribute,
+.hljs-params,
+.hljs-property,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #a7c1e8;
+}
+
+/* variables, template vars — dusty rose */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-name {
+  color: #d5aeb5;
+}
+
+/* meta, preprocessor — indigo */
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: #7c93dd;
+}
+
+/* punctuation and operators — body text */
+.hljs-punctuation,
+.hljs-operator,
+.hljs-subst {
+  color: #e4e6fb;
+}
+
+/* diffs */
+.hljs-addition { color: #648ed0; }
+.hljs-deletion { color: #b37580; }
+
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }

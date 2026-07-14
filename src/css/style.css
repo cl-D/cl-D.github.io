@@ -1,6 +1,7 @@
 /* ============================================================
    Sal L — portfolio
-   Theme: Gruvbox Dark · JetBrains Mono · terminal aesthetic
+   Theme: dark periwinkle pastels (colors.toml) · JetBrains Mono ·
+   terminal aesthetic
    ============================================================ */
 
 /* ---- Fonts ------------------------------------------------ */
@@ -33,29 +34,29 @@
   font-display: swap;
 }
 
-/* ---- Gruvbox Dark palette --------------------------------- */
+/* ---- Palette (colors.toml) --------------------------------- */
 :root {
-  --bg-hard: #1d2021;
-  --bg:      #282828;
-  --bg1:     #3c3836;
-  --bg2:     #504945;
-  --bg3:     #665c54;
-  --fg0:     #fbf1c7;
-  --fg:      #ebdbb2;
-  --fg2:     #d5c4a1;
-  --fg3:     #bdae93;
-  --fg4:     #a89984;
-  --gray:    #928374;
-  --red:     #fb4934;
-  --green:   #b8bb26;
-  --yellow:  #fabd2f;
-  --blue:    #83a598;
-  --purple:  #d3869b;
-  --aqua:    #8ec07c;
-  --orange:  #fe8019;
-  --red-dim:    #cc241d;
-  --green-dim:  #98971a;
-  --yellow-dim: #d79921;
+  /* backgrounds: steps derived from the toml's #070506, cool-tinted */
+  --bg-hard: #070506;
+  --bg:      #121016;
+  --bg1:     #1d1a22;
+  --bg2:     #2e2936;
+  --bg3:     #453d52;
+  /* foreground tiers: white → pale periwinkle cascade */
+  --fg0:     #ffffff;
+  --fg:      #e4e6fb;
+  --fg2:     #c3cef2;
+  --fg3:     #a7c1e8;
+  --fg4:     #836f79;
+  --gray:    #836f79;
+  /* accents */
+  --accent:   #979fec;
+  --blue:     #648ed0;
+  --link:     #7c93dd;
+  --pink:     #e095b5;
+  --mauve:    #cd9dcf;
+  --lavender: #d9b6fd;
+  --rose:     #b37580;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
@@ -77,18 +78,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection { background: var(--yellow); color: var(--bg-hard); }
+::selection { background: var(--accent); color: var(--bg-hard); }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-hard); }
 ::-webkit-scrollbar-thumb { background: var(--bg2); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--bg3); }
 
-a { color: var(--blue); text-decoration: none; }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--yellow);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -114,9 +115,9 @@ button:focus-visible {
 }
 
 .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
-.dot-red    { background: var(--red-dim); }
-.dot-yellow { background: var(--yellow-dim); }
-.dot-green  { background: var(--green-dim); }
+.dot-red    { background: var(--rose); }
+.dot-yellow { background: var(--pink); }
+.dot-green  { background: var(--blue); }
 
 .titlebar-title {
   flex: 1;
@@ -155,9 +156,9 @@ button:focus-visible {
 .tab.active {
   background: var(--bg);
   color: var(--fg0);
-  border-top-color: var(--yellow);
+  border-top-color: var(--accent);
 }
-.tab.active::before { color: var(--green); }
+.tab.active::before { color: var(--blue); }
 
 /* ---- Screen (content area) --------------------------------- */
 .screen {
@@ -167,9 +168,9 @@ button:focus-visible {
 section { margin-bottom: 3.25rem; }
 
 /* ---- Prompts & command headers ----------------------------- */
-.prompt-user { color: var(--green); font-weight: 700; }
+.prompt-user { color: var(--blue); font-weight: 700; }
 .prompt-sep  { color: var(--fg3); }
-.prompt-path { color: var(--blue); font-weight: 700; }
+.prompt-path { color: var(--lavender); font-weight: 700; }
 
 h2.cmd {
   font-size: 1rem;
@@ -177,8 +178,8 @@ h2.cmd {
   color: var(--fg0);
   margin: 0 0 1.1rem;
 }
-h2.cmd .dollar { color: var(--green); font-weight: 700; margin-right: 0.5em; }
-h2.cmd .cmd-name { color: var(--yellow); }
+h2.cmd .dollar { color: var(--blue); font-weight: 700; margin-right: 0.5em; }
+h2.cmd .cmd-name { color: var(--accent); }
 h2.cmd .cmd-arg  { color: var(--fg); }
 
 .output {
@@ -200,7 +201,7 @@ h2.cmd .cmd-arg  { color: var(--fg); }
 .cursor {
   display: inline-block;
   width: 0.6em;
-  background: var(--fg);
+  background: var(--fg0); /* toml: cursor = #ffffff */
   color: transparent;
   animation: blink 1.1s steps(1) infinite;
   margin-left: 2px;
@@ -216,11 +217,11 @@ h2.cmd .cmd-arg  { color: var(--fg); }
   margin: 0 0 0.35rem;
   line-height: 1.25;
 }
-.hero-name .accent { color: var(--yellow); }
+.hero-name .accent { color: var(--accent); }
 
 .hero-role {
   font-size: 1.05rem;
-  color: var(--aqua);
+  color: var(--mauve);
   font-weight: 500;
   margin: 0 0 0.25rem;
 }
@@ -249,10 +250,10 @@ h2.cmd .cmd-arg  { color: var(--fg); }
 }
 .btn:hover {
   text-decoration: none;
-  border-color: var(--yellow);
-  color: var(--yellow);
+  border-color: var(--accent);
+  color: var(--accent);
 }
-.btn .arrow { color: var(--orange); margin-right: 0.4em; }
+.btn .arrow { color: var(--pink); margin-right: 0.4em; }
 
 .toc {
   font-size: 0.85rem;
@@ -260,7 +261,7 @@ h2.cmd .cmd-arg  { color: var(--fg); }
   font-style: italic;
 }
 .toc a { color: var(--gray); text-decoration: underline dotted; }
-.toc a:hover { color: var(--yellow); }
+.toc a:hover { color: var(--accent); }
 
 /* ---- Experience --------------------------------------------- */
 .job { margin-bottom: 2.25rem; }
@@ -274,8 +275,8 @@ h2.cmd .cmd-arg  { color: var(--fg); }
   margin-bottom: 0.15rem;
 }
 
-.job-role { font-size: 1rem; font-weight: 700; color: var(--yellow); margin: 0; }
-.job-company { color: var(--aqua); font-weight: 500; }
+.job-role { font-size: 1rem; font-weight: 700; color: var(--accent); margin: 0; }
+.job-company { color: var(--mauve); font-weight: 500; }
 .job-company::before { content: "@ "; color: var(--gray); font-weight: 400; }
 
 .job-dates {
@@ -306,7 +307,7 @@ ul.bullets li::before {
   content: "▸";
   position: absolute;
   left: 0.25em;
-  color: var(--orange);
+  color: var(--pink);
 }
 ul.bullets li strong { color: var(--fg); font-weight: 500; }
 
@@ -379,7 +380,7 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
 .card-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: var(--accent);
   margin: 0;
 }
 .card-title .folder { color: var(--blue); margin-right: 0.4em; }
@@ -399,7 +400,7 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
 
 .card-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.2rem; flex: none; }
 .card-links a { font-size: 0.82rem; }
-.card-links a::before { content: "→ "; color: var(--orange); }
+.card-links a::before { content: "→ "; color: var(--pink); }
 
 /* ---- Chips / tags -------------------------------------------- */
 .chip {
@@ -413,14 +414,14 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
   white-space: nowrap;
 }
 
-.tag { color: var(--aqua); font-size: 0.82rem; }
+.tag { color: var(--mauve); font-size: 0.82rem; }
 
 /* ---- Skills (yaml style) -------------------------------------- */
 .skill-group { margin-bottom: 1.1rem; }
 .skill-group:last-child { margin-bottom: 0; }
 
 .skill-key {
-  color: var(--aqua);
+  color: var(--mauve);
   font-weight: 500;
   margin-bottom: 0.45rem;
 }
@@ -441,8 +442,8 @@ ul.bullets li strong { color: var(--fg); font-weight: 500; }
   margin-bottom: 0.6rem;
 }
 .cert-status { font-weight: 700; flex: none; }
-.cert-status.done { color: var(--green); }
-.cert-status.wip  { color: var(--yellow); }
+.cert-status.done { color: var(--blue); }
+.cert-status.wip  { color: var(--pink); }
 .cert-name { color: var(--fg0); font-weight: 500; }
 .cert-note { color: var(--gray); font-size: 0.85rem; font-style: italic; }
 
@@ -459,9 +460,9 @@ footer {
   color: var(--gray);
 }
 footer .exit { display: block; margin-bottom: 0.5rem; }
-footer .exit .dollar { color: var(--green); font-weight: 700; }
+footer .exit .dollar { color: var(--blue); font-weight: 700; }
 footer a { color: var(--fg4); text-decoration: underline dotted; }
-footer a:hover { color: var(--yellow); }
+footer a:hover { color: var(--accent); }
 
 /* ---- Blog index ---------------------------------------------------- */
 .post-card {
@@ -474,9 +475,9 @@ footer a:hover { color: var(--yellow); }
 .post-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: var(--accent);
 }
-.post-title:hover { color: var(--orange); text-decoration: none; }
+.post-title:hover { color: var(--pink); text-decoration: none; }
 
 .post-meta {
   font-size: 0.82rem;
@@ -498,7 +499,7 @@ footer a:hover { color: var(--yellow); }
   margin-bottom: 1.75rem;
 }
 .crumbs a { color: var(--fg4); }
-.crumbs a:hover { color: var(--yellow); }
+.crumbs a:hover { color: var(--accent); }
 
 .post-header h1 {
   font-size: 1.7rem;
@@ -511,7 +512,7 @@ footer a:hover { color: var(--yellow); }
 .post-header { margin-bottom: 2rem; }
 
 .back-link { margin-top: 2.5rem; font-size: 0.9rem; }
-.back-link .dollar { color: var(--green); font-weight: 700; }
+.back-link .dollar { color: var(--blue); font-weight: 700; }
 
 /* ---- Rendered markdown ----------------------------------------------- */
 .post-content { color: var(--fg2); }
@@ -531,23 +532,23 @@ footer a:hover { color: var(--yellow); }
 .post-content h4 { font-size: 0.95rem; }
 
 .post-content h1,
-.post-content h2 { color: var(--yellow); }
+.post-content h2 { color: var(--accent); }
 
 .post-content p { margin: 0 0 1.1rem; }
 
 .post-content a { text-decoration: underline; text-underline-offset: 3px; }
-.post-content a:hover { color: var(--aqua); }
+.post-content a:hover { color: var(--mauve); }
 
 .post-content strong { color: var(--fg); }
 .post-content em { color: var(--fg3); }
 
 .post-content ul, .post-content ol { padding-left: 1.6rem; margin: 0 0 1.1rem; }
 .post-content li { margin-bottom: 0.35rem; }
-.post-content li::marker { color: var(--orange); }
+.post-content li::marker { color: var(--pink); }
 
 .post-content code {
   background: var(--bg1);
-  color: var(--orange);
+  color: var(--pink);
   border-radius: 4px;
   padding: 0.1rem 0.4rem;
   font-size: 0.88em;

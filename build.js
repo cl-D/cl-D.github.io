@@ -134,12 +134,8 @@ cpSync(SRC, DIST, {
   },
 });
 
-// Syntax highlighting theme (Gruvbox) straight from the highlight.js package.
-const hljsStyles = ["gruvbox-dark-hard.min.css", "gruvbox-dark-hard.css"]
-  .map((name) => path.join(ROOT, "node_modules", "highlight.js", "styles", "base16", name))
-  .find((candidate) => existsSync(candidate));
-if (!hljsStyles) fail("could not find the Gruvbox highlight.js stylesheet — run `npm install` first.");
-cpSync(hljsStyles, path.join(DIST, "css", "hljs.css"));
+// Syntax highlighting theme lives in src/css/hljs.css (custom, matches the
+// site palette) and is copied to dist with the rest of the static files.
 
 // ---------------------------------------------------------------------------
 // 2. Build blog posts
